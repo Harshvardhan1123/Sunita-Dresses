@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Uniform Factory - Custom Uniforms and Apparel</title>
+    <meta name="description" content="Custom uniforms, corporate apparel, and branded clothing for businesses and organizations. Quality embroidery and screen printing services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a56db",
+                        secondary: "#1f2937",
+                        accent: "#dc2626"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Top Banner -->
+    <div class="bg-primary text-white text-center py-2 text-sm">
+        <p>Free Shipping on Orders Over $100 | Call Us: (555) 123-4567</p>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-secondary">THE UNIFORM FACTORY</h1>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-secondary hover:text-primary font-medium">Home</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium">Products</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium">Services</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium">About Us</a>
+                    <a href="#" class="text-secondary hover:text-primary font-medium">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-secondary">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Custom Uniforms & Apparel</h2>
+                    <p class="text-xl mb-6">Quality embroidery and screen printing for businesses of all sizes</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+                            Get a Quote
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
+                            View Products
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img 
+                        src="https://picsum.photos/600/400?random=1" 
+                        alt="Custom embroidered uniforms showcase" 
+                        class="rounded-lg shadow-xl"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Custom Embroidery</h3>
+                    <p class="text-gray-600">High-quality embroidery services for uniforms, polos, and corporate apparel with precise detailing.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-print text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Screen Printing</h3>
+                    <p class="text-gray-600">Vibrant screen printing on t-shirts, hoodies, and more for your branding needs.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Bulk Orders</h3>
+                    <p class="text-gray-600">Special pricing and dedicated support for large volume uniform orders and corporate accounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-12">Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img 
+                        src="https://picsum.photos/300/300?random=2" 
+                        alt="Polo shirts" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Polo Shirts</h3>
+                        <p class="text-gray-600 text-sm mb-3">Professional polo shirts with custom embroidery</p>
+                        <span class="text-primary font-bold">From $24.99</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img 
+                        src="https://picsum.photos/300/300?random=3" 
+                        alt="T-shirts" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">T-Shirts</h3>
+                        <p class="text-gray-600 text-sm mb-3">Custom printed t-shirts for teams and events</p>
+                        <span class="text-primary font-bold">From $14.99</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img 
+                        src="https://picsum.photos/300/300?random=4" 
+                        alt="Jackets" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Jackets</h3>
+                        <p class="text-gray-600 text-sm mb-3">Custom embroidered jackets and outerwear</p>
+                        <span class="text-primary font-bold">From $49.99</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img 
+                        src="https://picsum.photos/300/300?random=5" 
+                        alt="Hats" 
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-2">Hats & Caps</h3>
+                        <p class="text-gray-600 text-sm mb-3">Custom branded headwear for your team</p>
+                        <span class="text-primary font-bold">From $12.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-secondary mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">John Smith</h4>
+                            <p class="text-sm text-gray-600">Restaurant Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The quality of the uniforms exceeded our expectations. The embroidery is crisp and the fabric is durable."</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Office Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Great service and quick turnaround. Our corporate polos look professional and the team loves them."</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Mike Thompson</h4>
+                            <p class="text-sm text-gray-600">School Administrator</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"We ordered uniforms for our entire staff and the process was seamless. Highly recommend!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p class="text-xl mb-8">Get a free quote for your custom uniform needs</p>
+            <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                Request a Quote
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">THE UNIFORM FACTORY</h3>
+                    <p class="text-gray-400">Quality custom uniforms and apparel for businesses and organizations.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <p class="text-gray-400">123 Uniform Street</p>
+                    <p class="text-gray-400">City, State 12345</p>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
+                    <p class="text-gray-400">Email: info@theuniformfactory.net</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 The Uniform Factory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md:hidden button');
+            const nav = document.querySelector('nav');
+            mobileMenuButton.addEventListener('click', function() {
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('flex');
+                nav.classList.toggle('flex-col');
+                nav.classList.toggle('absolute');
+                nav.classList.toggle('top-full');
+                nav.classList.toggle('left-0');
+                nav.classList.toggle('right-0');
+                nav.classList.toggle('bg-white');
+                nav.classList.toggle('shadow-lg');
+                nav.classList.toggle('p-4');
+                nav.classList.toggle('space-y-4');
+            });
+        });
+    </script>
+</body>
+</html>
