@@ -1,301 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Uniform Factory - Custom Uniforms and Apparel</title>
-    <meta name="description" content="Custom uniforms, corporate apparel, and branded clothing for businesses and organizations. Quality embroidery and screen printing services.">
+    <title>Vogue Threads - Modern Clothing Shop</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#1a56db",
-                        secondary: "#1f2937",
-                        accent: "#dc2626"
-                    }
-                }
-            }
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for typography */
+        body {
+            font-family: 'Inter', sans-serif;
         }
-    </script>
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Style for the hero background image */
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body class="min-h-screen bg-gray-50">
-    <!-- Top Banner -->
-    <div class="bg-primary text-white text-center py-2 text-sm">
-        <p>Free Shipping on Orders Over $100 | Call Us: (555) 123-4567</p>
-    </div>
+<body class="text-gray-800" style="background-image: linear-gradient(to bottom right, rgb(24, 51, 42), rgb(157, 211, 193)); background-attachment: fixed;">
 
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-secondary">THE UNIFORM FACTORY</h1>
-                </div>
-
-                <!-- Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="text-secondary hover:text-primary font-medium">Home</a>
-                    <a href="#" class="text-secondary hover:text-primary font-medium">Products</a>
-                    <a href="#" class="text-secondary hover:text-primary font-medium">Services</a>
-                    <a href="#" class="text-secondary hover:text-primary font-medium">About Us</a>
-                    <a href="#" class="text-secondary hover:text-primary font-medium">Contact</a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button class="text-secondary">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Left Side: Logo & Main Nav -->
+            <div class="flex items-center space-x-8">
+                <a href="index.html">
+                    <img class="h-14 w-auto" src="Untitled_design-removebg-preview (1).png" alt="Vogue Logo">
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-black transition duration-300">Men</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition duration-300">Women</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition duration-300">Kids</a>
+                    <a href="shop.html" class="text-gray-600 hover:text-black transition duration-300 font-semibold">Shop</a>
                 </div>
             </div>
+
+            <!-- Right Side: Search, Orders & Cart -->
+            <div class="hidden md:flex items-center space-x-5">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full py-2 px-4 w-48 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition">
+                    <svg class="w-5 h-5 text-gray-400 absolute right-3 top-1/2 transform -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <a href="#" class="text-gray-600 hover:text-black transition duration-300 flex items-center space-x-1">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <span>My Orders</span>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-black transition duration-300">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-black focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-3">
+            <a href="#" class="block text-gray-600 hover:text-black transition duration-300">Men</a>
+            <a href="#" class="block text-gray-600 hover:text-black transition duration-300">Women</a>
+            <a href="#" class="block text-gray-600 hover:text-black transition duration-300">Kids</a>
+            <a href="shop.html" class="block text-gray-600 hover:text-black transition duration-300 font-semibold">Shop</a>
+            <a href="#" class="block text-gray-600 hover:text-black transition duration-300">My Orders</a>
+            <a href="#" class="block text-gray-600 hover:text-black transition duration-300">Cart</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Custom Uniforms & Apparel</h2>
-                    <p class="text-xl mb-6">Quality embroidery and screen printing for businesses of all sizes</p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
-                            Get a Quote
-                        </button>
-                        <button class="border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-lg font-semibold transition duration-300">
-                            View Products
-                        </button>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <img 
-                        src="https://picsum.photos/600/400?random=1" 
-                        alt="Custom embroidered uniforms showcase" 
-                        class="rounded-lg shadow-xl"
-                        loading="lazy"
-                    />
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-[60vh] md:h-[80vh] relative text-white">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="container mx-auto px-6 h-full flex flex-col justify-center items-center text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold font-display leading-tight mb-4">Style That Defines You</h1>
+                <p class="text-lg md:text-xl max-w-2xl mb-8">Discover the latest trends and timeless classics. Quality apparel for every occasion.</p>
+                <a href="shop.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Shop Now
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-secondary mb-12">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tshirt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Custom Embroidery</h3>
-                    <p class="text-gray-600">High-quality embroidery services for uniforms, polos, and corporate apparel with precise detailing.</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-print text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Screen Printing</h3>
-                    <p class="text-gray-600">Vibrant screen printing on t-shirts, hoodies, and more for your branding needs.</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-truck text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Bulk Orders</h3>
-                    <p class="text-gray-600">Special pricing and dedicated support for large volume uniform orders and corporate accounts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-secondary mb-12">Featured Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img 
-                        src="https://picsum.photos/300/300?random=2" 
-                        alt="Polo shirts" 
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                    />
-                    <div class="p-4">
-                        <h3 class="font-semibold text-lg mb-2">Polo Shirts</h3>
-                        <p class="text-gray-600 text-sm mb-3">Professional polo shirts with custom embroidery</p>
-                        <span class="text-primary font-bold">From $24.99</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img 
-                        src="https://picsum.photos/300/300?random=3" 
-                        alt="T-shirts" 
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                    />
-                    <div class="p-4">
-                        <h3 class="font-semibold text-lg mb-2">T-Shirts</h3>
-                        <p class="text-gray-600 text-sm mb-3">Custom printed t-shirts for teams and events</p>
-                        <span class="text-primary font-bold">From $14.99</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img 
-                        src="https://picsum.photos/300/300?random=4" 
-                        alt="Jackets" 
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                    />
-                    <div class="p-4">
-                        <h3 class="font-semibold text-lg mb-2">Jackets</h3>
-                        <p class="text-gray-600 text-sm mb-3">Custom embroidered jackets and outerwear</p>
-                        <span class="text-primary font-bold">From $49.99</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img 
-                        src="https://picsum.photos/300/300?random=5" 
-                        alt="Hats" 
-                        class="w-full h-48 object-cover"
-                        loading="lazy"
-                    />
-                    <div class="p-4">
-                        <h3 class="font-semibold text-lg mb-2">Hats & Caps</h3>
-                        <p class="text-gray-600 text-sm mb-3">Custom branded headwear for your team</p>
-                        <span class="text-primary font-bold">From $12.99</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-secondary mb-12">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <h4 class="font-semibold">John Smith</h4>
-                            <p class="text-sm text-gray-600">Restaurant Owner</p>
+        <!-- Category Cards Section -->
+        <section id="categories" class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Shop by Category</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Category Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://theindianethnicco.com/cdn/shop/files/19_eaf59cb2-7028-45ae-8f1e-fb6789c9535e_600x.jpg?v=1701242649" alt="Casual Wear" class="w-full h-80 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Casual Wear</h3>
+                            <p class="text-gray-600 mt-2">Comfortable styles for everyday life.</p>
                         </div>
                     </div>
-                    <p class="text-gray-700">"The quality of the uniforms exceeded our expectations. The embroidery is crisp and the fabric is durable."</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-600">Office Manager</p>
+                    <!-- Category Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://i.pinimg.com/236x/f2/12/58/f212582bc0c48f64273c6bd3d64d2144.jpg" alt="Formal Attire" class="w-full h-80 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Formal Attire</h3>
+                            <p class="text-gray-600 mt-2">Sharp looks for special occasions.</p>
                         </div>
                     </div>
-                    <p class="text-gray-700">"Great service and quick turnaround. Our corporate polos look professional and the team loves them."</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <h4 class="font-semibold">Mike Thompson</h4>
-                            <p class="text-sm text-gray-600">School Administrator</p>
+                    <!-- Category Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://www.shutterstock.com/image-photo/serious-attractive-sports-woman-wearing-600nw-2462401303.jpg" alt="Activewear" class="w-full h-80 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Activewear</h3>
+                            <p class="text-gray-600 mt-2">Performance gear to keep you moving.</p>
                         </div>
                     </div>
-                    <p class="text-gray-700">"We ordered uniforms for our entire staff and the process was seamless. Highly recommend!"</p>
+                    <!-- Category Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://s7ap1.scene7.com/is/image/noveljewelsprod/BridalPolki?dpr=on&ts=1737099298021" alt="Accessories" class="w-full h-80 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Accessories</h3>
+                            <p class="text-gray-600 mt-2">The perfect finishing touches.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p class="text-xl mb-8">Get a free quote for your custom uniform needs</p>
-            <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                Request a Quote
-            </button>
-        </div>
-    </section>
+        <!-- What Our Clients Say Section -->
+        <section id="testimonials" class="py-16 sm:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white/30 backdrop-blur-lg rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/100x100/E2E8F0/4A5568?text=JS" alt="Client Jessica Smith" class="w-24 h-24 rounded-full mb-4 border-4 border-white/50 shadow-md">
+                        <p class="text-gray-700 italic mb-4">"The quality of the clothing is outstanding, and the customer service is second to none. I'm a customer for life!"</p>
+                        <h4 class="font-bold text-gray-800 mt-auto">Jessica Smith</h4>
+                        <p class="text-sm text-gray-500">Fashion Blogger</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white/30 backdrop-blur-lg rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/100x100/CBD5E0/2D3748?text=MD" alt="Client Michael Davis" class="w-24 h-24 rounded-full mb-4 border-4 border-white/50 shadow-md">
+                        <p class="text-gray-700 italic mb-4">"Vogue Threads has the best collection for formal wear. I found the perfect suit for my conference last week. Highly recommended!"</p>
+                        <h4 class="font-bold text-gray-800 mt-auto">Michael Davis</h4>
+                        <p class="text-sm text-gray-500">Corporate Professional</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white/30 backdrop-blur-lg rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/100x100/A0AEC0/1A202C?text=EW" alt="Client Emily White" class="w-24 h-24 rounded-full mb-4 border-4 border-white/50 shadow-md">
+                        <p class="text-gray-700 italic mb-4">"Shopping for my kids has never been easier. The clothes are stylish, durable, and my little ones love them!"</p>
+                        <h4 class="font-bold text-gray-800 mt-auto">Emily White</h4>
+                        <p class="text-sm text-gray-500">Busy Mom</p>
+                    </div>
+                    <!-- Testimonial Card 4 -->
+                    <div class="bg-white/30 backdrop-blur-lg rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/100x100/718096/EDF2F7?text=CR" alt="Client Chris Rogers" class="w-24 h-24 rounded-full mb-4 border-4 border-white/50 shadow-md">
+                        <p class="text-gray-700 italic mb-4">"The activewear is both functional and fashionable. It's perfect for my morning runs and gym sessions. Great fit and quality."</p>
+                        <h4 class="font-bold text-gray-800 mt-auto">Chris Rogers</h4>
+                        <p class="text-sm text-gray-500">Fitness Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-secondary text-white py-12">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Section -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4">THE UNIFORM FACTORY</h3>
-                    <p class="text-gray-400">Quality custom uniforms and apparel for businesses and organizations.</p>
+                    <h3 class="text-lg font-semibold mb-4">Vogue</h3>
+                    <p class="text-gray-400">Your destination for modern, stylish, and high-quality apparel for men, women, and kids.</p>
                 </div>
+                <!-- Links Section -->
                 <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
+                <!-- Help Section -->
                 <div>
-                    <h4 class="font-semibold mb-4">Contact Info</h4>
-                    <p class="text-gray-400">123 Uniform Street</p>
-                    <p class="text-gray-400">City, State 12345</p>
-                    <p class="text-gray-400">Phone: (555) 123-4567</p>
-                    <p class="text-gray-400">Email: info@theuniformfactory.net</p>
+                    <h3 class="text-lg font-semibold mb-4">Help & Info</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Track Your Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                    </ul>
                 </div>
+                <!-- Social & Newsletter -->
                 <div>
-                    <h4 class="font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.523 3.379 4.75 3.419a9.897 9.897 0 01-6.127 2.105c-.39 0-.775-.023-1.15-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 The Uniform Factory. All rights reserved.</p>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Vogue Threads. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const href = this.getAttribute('href');
-                    if (href && href !== '#') {
-                        window.location.href = href;
-                    }
-                });
-            });
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-            // Mobile menu toggle
-            const mobileMenuButton = document.querySelector('.md:hidden button');
-            const nav = document.querySelector('nav');
-            mobileMenuButton.addEventListener('click', function() {
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-                nav.classList.toggle('flex-col');
-                nav.classList.toggle('absolute');
-                nav.classList.toggle('top-full');
-                nav.classList.toggle('left-0');
-                nav.classList.toggle('right-0');
-                nav.classList.toggle('bg-white');
-                nav.classList.toggle('shadow-lg');
-                nav.classList.toggle('p-4');
-                nav.classList.toggle('space-y-4');
-            });
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
